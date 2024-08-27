@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main_background_color: #FF4F7D; 
+    --light_background_color: #FF6680; 
+    --card_background_color: #2B2E3B; 
+    --primary_text_color: #FFFFFF; 
+    --secondary_text_color: #7D8496; 
+    --highlight_color: #FF5E5E; 
+    --button_text_color: #4A4F66; 
+    --line_color: #3B3F51; 
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.container {
+    background: linear-gradient(135deg, #FF4F7D 50%, #FF6680 50%);
+    background-repeat: no-repeat;
+    height: 100vh;
+    text-align: center;
+    padding: 5%;
+}
+
+.wrapper {
+    width: 60%; 
+    max-height: 90%; 
+    overflow-y: hidden;
+    background-color: #2B2E3B; 
+    border-radius: 10px; 
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2); 
+    margin: 0 auto; 
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+h1 {
+    color: var(--primary_text_color);
+    padding: 15px 0;
+    border-bottom: 2px solid var(--line_color);
+}
+
+.todo_list {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 20px 10px; 
+}
+
+.task {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: var(--card_background_color); 
+    padding: 15px; 
+    margin-bottom: 10px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    color: var(--primary_text_color); 
+    font-size: 18px; 
+    transition: background-color 0.3s; 
+}
+
+.task:hover {
+    background-color: var(--light_background_color); 
+}
+
+.task-name {
+    flex-grow: 1; 
+    text-align: left; 
+}
+
+.task-buttons {
+    display: flex; 
+    gap: 10px; 
+}
+
+.task-buttons button {
+    background-color: transparent; 
+    border: none; 
+    color: var(--button_text_color); 
+    font-size: 16px; 
+    cursor: pointer; 
+    padding: 8px 10px; 
+    border-radius: 4px; 
+    transition: background-color 0.3s; 
+}
+
+.task-buttons button:hover {
+    color: var(--primary_text_color);
+    background-color: var(--line_color); 
+}
