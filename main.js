@@ -21,18 +21,6 @@ createApp({
                 })
         },
         addTask(){
-
-            // const data = {
-            //     taskName: this.newTask.taskName,
-            //     description: this.newTask.description
-            // };
-            
-            // axios.post(this.apiUrl, data, {
-            //     headers: {'Content-Type': 'multipart/form-data'}
-            // }).then(res => {
-            //     this.list = res.data;
-            // })
-
             if (this.newTask.taskName.length < 3 | this.newTask.description.length < 3) {
                 alert('Il titolo e la descrizione devono avere almeno 3 caratteri')
             } else {
@@ -47,10 +35,16 @@ createApp({
     
                 this.newTask.taskName = '';
                 this.newTask.description = '';
-    
             }
-            
-        }
+        },
+        toggleDone(index){
+            const data = new FormData();
+            data.append('indexToToggle', index);
+            axios.post(this.apiUrl, data)
+                .then(res => {
+                    this.list = res.data;
+                })
+            }
     },
     mounted(){
         this.getApi();

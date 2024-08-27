@@ -20,6 +20,12 @@ if (isset($_POST['taskName'])) {
     file_put_contents('todo-list.json', json_encode($list));
 }
 
+if (isset($_POST['indexToToggle'])) {
+    $indexToToggle = $_POST['indexToToggle'];
+    $list[$indexToToggle]['done'] = !$list[$indexToToggle]['done'];
+    file_put_contents('todo-list.json', json_encode($list));
+}
+
 
 // leggo il file php come fosse in Json
 header('Content-Type: application/json');
