@@ -1,0 +1,39 @@
+[
+    {
+        "taskName": "Ripasso HTML",
+        "description": "Rivedere le basi dell'HTML, come la struttura dei documenti, i tag principali e le best practices.",
+        "done": false
+    },
+    {
+        "taskName": "Ripasso CSS",
+        "description": "Esaminare le proprietà fondamentali del CSS, i selettori, il layout con Flexbox e Grid, e le media queries.",
+        "done": false
+    },
+    {
+        "taskName": "Ripasso JavaScript",
+        "description": "Rivedere le basi del JavaScript, inclusi variabili, funzioni, oggetti, array, e le nuove funzionalità ES6+.",
+        "done": true
+    },
+    {
+        "taskName": "Ripasso Vue.js",
+        "description": "Rivedere i concetti chiave di Vue.js, come componenti, direttive, gestione dello stato e il ciclo di vita dei componenti.",
+        "done": false
+    },
+    {
+        "taskName": "Ripasso Node.js",
+        "description": "Esaminare i concetti fondamentali di Node.js, come il sistema di moduli, gestione degli eventi, e la creazione di server.",
+        "done": true
+    },
+    {
+        "taskName": "Ripasso Vite",
+        "description": "Rivedere le configurazioni e le caratteristiche di Vite come build tool, la gestione dei moduli e il miglioramento della velocità di sviluppo.",
+        "done": false
+    },
+    {
+        "taskName": "Ripasso PHP",
+        "description": "Esaminare le basi del PHP, come la sintassi, la manipolazione delle stringhe, l'interazione con i database e la gestione delle sessioni.",
+        "done": false
+    }
+]
+
+  
