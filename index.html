@@ -34,7 +34,7 @@
                         <li class="task" :class="{'done' : item.done}" v-for="(item, index) in list" :key="index">
                             <span class="task-name"> {{ item.taskName}}</span>
                             <div class="task-buttons">
-                                <button><i class="fas fa-trash-alt"></i></button>
+                                <button v-if="item.done"><i class="fas fa-trash-alt"></i></button>
                                 <button><i class="fa-solid fa-eye"></i></button>
                             </div>
                         </li>

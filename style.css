@@ -99,7 +99,7 @@ h1 {
 
 
 .done {
-    text-decoration: line-through var(--main_background_color) wavy 2px;
+    text-decoration: line-through var(--main_background_color) 2px;
 }
 
 .task.done:hover {
