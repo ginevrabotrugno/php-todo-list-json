@@ -105,3 +105,37 @@ h1 {
 .task.done:hover {
     text-decoration-color: var(--secondary_text_color); 
 }
+
+.add-task {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--card_background_color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-task {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid var(--line_color);
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    color: var(--button_text_color);
+}
+
+.add-button {
+    padding: 10px 20px;
+    background-color: var(--highlight_color);
+    color: var(--primary_text_color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.add-button:hover {
+    background-color: var(--light_background_color);
+}
