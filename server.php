@@ -8,6 +8,17 @@ $list = json_decode($json_string, true);
 
 
 // codice php
+if (isset($_POST['taskName'])) {
+    $new_item = [
+        'taskName' => $_POST['taskName'],
+        'description' => $_POST['description'],
+        'done' => false        
+    ];
+
+    $list[] = $new_item;
+
+    file_put_contents('todo-list.json', json_encode($list));
+}
 
 
 // leggo il file php come fosse in Json
