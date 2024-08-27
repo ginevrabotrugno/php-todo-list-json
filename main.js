@@ -6,7 +6,11 @@ createApp({
         return{
             title: 'ToBoList',
             apiUrl: 'server.php',
-            list: []
+            list: [],
+            newTask: {
+                taskName: '',
+                description: ''
+            }
         }
     },
     methods: {
@@ -15,6 +19,30 @@ createApp({
                 .then(res => {
                     this.list = res.data;
                 })
+        },
+        addTask(){
+            
+            // const data = {
+            //     taskName: this.newTask.taskName,
+            //     description: this.newTask.description
+            // };
+            
+            // axios.post(this.apiUrl, data, {
+            //     headers: {'Content-Type': 'multipart/form-data'}
+            // }).then(res => {
+            //     this.list = res.data;
+            // })
+
+            const data = new FormData();
+            data.append('taskName', this.newTask.taskName);
+            data.append('description', this.newTask.description);
+
+            axios.post(this.apiUrl, data)
+                .then(res => {
+                    this.list = res.data;
+                })
+
+            
             
         }
     },

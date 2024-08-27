@@ -29,6 +29,13 @@
         <div class="container">
             <div class="wrapper">
                 <h1>{{ title }}</h1>
+
+                <div class="add-task">
+                    <input type="text" v-model="newTask.taskName" placeholder="Nome del task" class="input-task">
+                    <input type="text" v-model="newTask.description" placeholder="Descrizione del task" class="input-task">
+                    <button class="add-button" @click="addTask()">Aggiungi Task</button>
+                </div>
+
                 <div class="list">
                     <ul class="todo_list">
                         <li class="task" :class="{'done' : item.done}" v-for="(item, index) in list" :key="index">
@@ -41,11 +48,6 @@
                     </ul>
                 </div>
 
-                <div class="add-task">
-                    <input type="text" v-model="newTaskName" placeholder="Nome del task" class="input-task">
-                    <input type="text" v-model="newTaskDescription" placeholder="Descrizione del task" class="input-task">
-                    <button class="add-button">Aggiungi Task</button>
-                </div>
     
             </div>
         </div>
