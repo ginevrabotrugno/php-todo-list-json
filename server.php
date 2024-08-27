@@ -26,6 +26,12 @@ if (isset($_POST['indexToToggle'])) {
     file_put_contents('todo-list.json', json_encode($list));
 }
 
+if (isset($_POST['indexToDelete'])) {
+    $indexToDelete = $_POST['indexToDelete'];
+    array_splice($list, $indexToDelete, 1);
+    file_put_contents('todo-list.json', json_encode($list));
+}
+
 
 // leggo il file php come fosse in Json
 header('Content-Type: application/json');

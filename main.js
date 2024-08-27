@@ -44,7 +44,15 @@ createApp({
                 .then(res => {
                     this.list = res.data;
                 })
-            }
+        },
+        deleteTask(index){
+            const data = new FormData();
+            data.append('indexToDelete', index);
+            axios.post(this.apiUrl, data)
+                .then(res => {
+                    this.list = res.data;
+                })
+        }
     },
     mounted(){
         this.getApi();
