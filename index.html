@@ -14,13 +14,21 @@
 
     <!-- my style -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Vue3 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.5/axios.min.js" integrity="sha512-01Pe9P3mJM/4c80VuoYEGHlspKGbd9uWQe9HtdLsdTqV0CS1kz8ca44sinVEXEvlZNciMmsAjeEbm5ZxHC7yYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
     <title>ToBoList</title>
 </head>
 <body>
     <div id="app">
         <div class="container">
             <div class="wrapper">
-                <h1>ToBoList</h1>
+                <h1>{{ title }}</h1>
                 <div class="list">
                     <ul class="todo_list">
                         <li class="task">
@@ -57,5 +65,7 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
