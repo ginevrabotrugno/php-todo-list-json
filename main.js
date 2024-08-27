@@ -1,15 +1,24 @@
 const { createApp } = Vue;
 
+
 createApp({
     data(){
         return{
-            title: 'ToBoList'
+            title: 'ToBoList',
+            apiUrl: 'server.php',
+            list: []
         }
     },
     methods: {
-
+        getApi(){
+            axios.get(this.apiUrl)
+                .then(res => {
+                    this.list = res.data;
+                })
+            
+        }
     },
     mounted(){
-        console.log('MOUNTED');
+        this.getApi();
     },
 }).mount('#app');
