@@ -46,12 +46,15 @@ createApp({
                 })
         },
         deleteTask(index){
-            const data = new FormData();
-            data.append('indexToDelete', index);
-            axios.post(this.apiUrl, data)
-                .then(res => {
-                    this.list = res.data;
-                })
+            const taskToDelete = this.list[index];
+            if (confirm(`Sei sicuro di voler eliminare il task "${taskToDelete.taskName}"?`)) {
+                const data = new FormData();
+                data.append('indexToDelete', index);
+                axios.post(this.apiUrl, data)
+                    .then(res => {
+                        this.list = res.data;
+                    })    
+            }
         }
     },
     mounted(){
