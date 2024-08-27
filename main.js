@@ -21,7 +21,7 @@ createApp({
                 })
         },
         addTask(){
-            
+
             // const data = {
             //     taskName: this.newTask.taskName,
             //     description: this.newTask.description
@@ -33,16 +33,22 @@ createApp({
             //     this.list = res.data;
             // })
 
-            const data = new FormData();
-            data.append('taskName', this.newTask.taskName);
-            data.append('description', this.newTask.description);
-
-            axios.post(this.apiUrl, data)
-                .then(res => {
-                    this.list = res.data;
-                })
-
-            
+            if (this.newTask.taskName.length < 3 | this.newTask.description.length < 3) {
+                alert('Il titolo e la descrizione devono avere almeno 3 caratteri')
+            } else {
+                const data = new FormData();
+                data.append('taskName', this.newTask.taskName);
+                data.append('description', this.newTask.description);
+    
+                axios.post(this.apiUrl, data)
+                    .then(res => {
+                        this.list = res.data;
+                    })
+    
+                this.newTask.taskName = '';
+                this.newTask.description = '';
+    
+            }
             
         }
     },
