@@ -139,3 +139,18 @@ h1 {
 .add-button:hover {
     background-color: var(--light_background_color);
 }
+
+.description_box {
+    width: 80%;
+    margin: 20px auto;
+    color: var(--primary_text_color);
+}
+
+.description_box p {
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

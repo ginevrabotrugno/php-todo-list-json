@@ -1,3 +1,18 @@
+<?php 
+
+// leggo il json e lo salvo in stringa
+$json_string = file_get_contents('todo-list.json');
+
+// converto stringa in elemento php (true - stringa => array associativo)
+$list = json_decode($json_string, true);
+
+$task = $list[$_GET['index']];
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,28 +43,14 @@
     <div id="app">
         <div class="container">
             <div class="wrapper">
-                <h1>{{ title }}</h1>
-
-                <div class="add-task">
-                    <input type="text" v-model="newTask.taskName" placeholder="Nome del task" class="input-task">
-                    <input type="text" v-model="newTask.description" placeholder="Descrizione del task" class="input-task">
-                    <button class="add-button" @click="addTask()">Aggiungi Task</button>
-                </div>
-
-                <div class="list">
-                    <ul class="todo_list">
-                        <li class="task" :class="{'done' : item.done}" v-for="(item, index) in list" :key="index" @click="toggleDone(index)">
-                            <span class="task-name"> {{ item.taskName}}</span>
-                            <div class="task-buttons">
-                                <button v-if="item.done" @click.stop="deleteTask(index)"><i class="fas fa-trash-alt"></i></button>
-                                <button>
-                                    <a :href="`task-detail.php?index=${index}`" @click.stop="">
-                                        <i class="fa-solid fa-eye"></i>
-                                    </a>
-                                </button>
-                            </div>
-                        </li>
-                    </ul>
+                <h1>
+                    <?php echo $task['taskName'] ?>
+                </h1>
+                
+                <div class="description_box">
+                    <p>
+                        <?php echo $task['description'] ?>
+                    </p>
                 </div>
 
     
