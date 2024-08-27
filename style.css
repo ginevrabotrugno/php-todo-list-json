@@ -32,7 +32,7 @@
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2); 
     margin: 0 auto; 
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); 
 }
@@ -67,6 +67,10 @@ h1 {
     background-color: var(--light_background_color); 
 }
 
+.task:hover .task-buttons button i {
+    color: var(--primary_text_color); 
+}
+
 .task-name {
     flex-grow: 1; 
     text-align: left; 
@@ -91,4 +95,13 @@ h1 {
 .task-buttons button:hover {
     color: var(--primary_text_color);
     background-color: var(--line_color); 
+}
+
+
+.done {
+    text-decoration: line-through var(--main_background_color) wavy 2px;
+}
+
+.task.done:hover {
+    text-decoration-color: var(--secondary_text_color); 
 }
